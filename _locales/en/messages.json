@@ -1,0 +1,17 @@
+{
+  "copyTemplateTitle": {
+    "message": "copy template"
+  },
+  "discriptionUrl": {
+    "message": "tab url"
+  },
+  "discriptionTitle": {
+    "message": "tab title"
+  },
+  "save": {
+    "message": "save"
+  },
+  "descriptionSpecialString": {
+    "message": "The special characters used in the template are as follows"
+  }
+}

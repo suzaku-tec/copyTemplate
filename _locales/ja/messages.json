@@ -1,0 +1,17 @@
+{
+  "copyTemplateTitle": {
+    "message": "テンプレートコピー"
+  },
+  "discriptionUrl": {
+    "message": "URLに置換される文字"
+  },
+  "discriptionTitle": {
+    "message": "タイトルに置換される文字"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "descriptionSpecialString": {
+    "message": "テンプレートで利用される特殊文字は、下記の通りです。"
+  }
+}

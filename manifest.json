@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "copyTemplate",
+	"description": "Copy URLs, tab names, etc. to the clipboard in a specific format",
+	"version": "0.0.1",
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"default_locale": "en",
+	"background": {
+		"scripts": [
+			"background_script.js"
+		]
+	},
+	"options_ui": {
+		"page": "options/index.html"
+	},
+	"permissions": [
+		"contextMenus",
+		"storage",
+		"clipboardWrite",
+		"<all_urls>",
+		"tabs"
+	],
+	"applications": {
+		"gecko": {
+			"id": "addon@example.com"
+		}
+	}
+}
