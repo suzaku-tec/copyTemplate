@@ -22,9 +22,9 @@
 		"<all_urls>",
 		"tabs"
 	],
-	"applications": {
+	"browser_specific_settings": {
 		"gecko": {
-			"id": "addon@example.com"
+			"id": "copyTemplate@jhypd380.com"
 		}
 	}
 }
