@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "copyTemplate",
 	"description": "Copy URLs, tab names, etc. to the clipboard in a specific format",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icons": {
 		"64": "icons/icon.png"
 	},
