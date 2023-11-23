@@ -2,7 +2,7 @@
 browser.contextMenus.create(
   {
     id: "copyTemplate-selection",
-    title: "test" + browser.i18n.getMessage("copyTemplateTitle"),
+    title: browser.i18n.getMessage("copyTemplateTitle"),
     contexts: ["all"],
   },
   () => void browser.runtime.lastError,
