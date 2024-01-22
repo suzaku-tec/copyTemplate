@@ -7,7 +7,8 @@ function saveOptions(e) {
 
 function restoreOptions() {
   function setTemplate(result) {
-    document.getElementById("template").value = result;
+    console.log(result);
+    document.getElementById("template").value = result.template;
   }
 
   function onError(error) {
@@ -23,6 +24,7 @@ function init() {
   document.getElementById("discriptionUrl").innerText = `\${url}: ${browser.i18n.getMessage("discriptionUrl")}`;
   document.getElementById("discriptionTitle").innerText = `\${title}: ${browser.i18n.getMessage("discriptionTitle")}`;
   document.getElementById("save").innerText = browser.i18n.getMessage("save");
+  restoreOptions();
 }
 
 document.addEventListener("DOMContentLoaded", init);
