@@ -1,0 +1,64 @@
+{
+  "addons": {
+    "copyTemplate@jhypd380.com": {
+      "updates": [
+        {
+          "version": "0.0.1",
+          "update_link": "",
+          "update_info_url": "",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "57.0"
+            }
+          },
+          "release_notes": {
+            "ja": "初期リリース:\n- テンプレートを使用してURLとタイトルをコピーする基本機能\n- シンプルなテンプレート設定UI\n- 英語と日本語のローカライゼーション対応",
+            "en": "Initial release:\n- Basic functionality to copy URLs and titles using templates\n- Simple template settings UI\n- English and Japanese localization support"
+          }
+        },
+        {
+          "version": "0.0.2",
+          "update_link": "",
+          "update_info_url": "",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "57.0"
+            }
+          },
+          "release_notes": {
+            "ja": "UI改善:\n- テンプレート設定画面のレイアウト最適化\n- エラーハンドリングの改善",
+            "en": "UI improvements:\n- Optimized layout of the template settings page\n- Improved error handling"
+          }
+        },
+        {
+          "version": "0.0.3",
+          "update_link": "",
+          "update_info_url": "",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "57.0"
+            }
+          },
+          "release_notes": {
+            "ja": "機能改善:\n- テンプレート管理の強化\n- コンテキストメニューの表示改善\n- ストレージ処理の最適化",
+            "en": "Feature improvements:\n- Enhanced template management\n- Improved display of the context menu\n- Optimized storage processing"
+          }
+        },
+        {
+          "version": "0.0.4",
+          "update_link": "",
+          "update_info_url": "",
+          "applications": {
+            "gecko": {
+              "strict_min_version": "57.0"
+            }
+          },
+          "release_notes": {
+            "ja": "複数テンプレート対応:\n- 複数のテンプレートを保存・管理可能に変更\n- ドロップダウンリストでのテンプレート選択機能追加\n- テンプレートの追加・編集・削除機能\n- テキストエリアのリサイズ機能追加\n- UIレイアウトの全面的な改善\n- 既存テンプレートの自動移行機能追加",
+            "en":"Feature improvements:\n- Enhanced template management\n- Improved display of the context menu\n- Optimized storage processing"
+          }
+        }
+      ]
+    }
+  }
+}
