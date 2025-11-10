@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <h1 id="myHeading">Setting</h1>
     <script src="script.js"></script>
-    <div style="margin: 10px;">
-      <div id="descriptionSpecialString"></div>
-      <div id="discriptionUrl"></div>
-      <div id="discriptionTitle"></div>
+    <div class="description-container">
+      <div id="descriptionSpecialString" class="description-item"></div>
+      <div id="discriptionUrl" class="description-item"></div>
+      <div id="discriptionTitle" class="description-item"></div>
     </div>
-    <div>
-      <textarea id="template" style="resize: none; margin: 5px; width: calc(100vw - 40px);"></textarea>
-    </div>
-    <div>
-      <button id="save"></button>
+      <div class="" style="margin-top: 10px;">
+        <div style="margin: 5px 0px">
+          <select id="templateSelect">
+            <option value="" disabled selected>Select Template</option>
+          </select>
+        </div>
+        <div style="margin: 5px 0px">
+          <button id="newTemplate" class="small-button"></button>
+          <button id="deleteTemplate" class="small-button"></button>
+        </div>
+      </div>
+      <div style="margin: 5px 0px">
+        <input
+          type="text"
+          id="templateName"
+          placeholder="Template Name"
+          class="template-name-input"
+        />
+      </div>
+      <div style="margin: 5px 0px">
+        <textarea
+          id="template"
+          class="template-textarea"
+          placeholder="Enter template content"
+        ></textarea>
+      </div>
+      <div class="button-group" style="margin: 5px 0px">
+        <button id="save" class="small-button"></button>
+      </div>
     </div>
   </body>
 </html>

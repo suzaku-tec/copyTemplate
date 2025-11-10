@@ -1,27 +1,64 @@
-// Put all the javascript code here, that you want to execute in background.
+// Create parent menu
 browser.contextMenus.create(
   {
-    id: "copyTemplate-selection",
+    id: "copyTemplate-parent",
     title: browser.i18n.getMessage("copyTemplateTitle"),
     contexts: ["all"],
   },
-  () => void browser.runtime.lastError,
+  () => void browser.runtime.lastError
 );
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  switch (info.menuItemId) {
-    case "copyTemplate-selection":
-      var getting = browser.storage.sync.get("template");
-      getting.then(
-        (result) => {
-          var template = result.template ?? "";
-          var url = tab.url;
-          var title = tab.title;
-          var str = template.replace("${url}", url).replace("${title}", title);
-          navigator.clipboard.writeText(str);
-        }
-      );
-    break;
+// Update context menu items when templates change
+function updateContextMenus(templates) {
+  // Remove all existing template menu items
+  browser.contextMenus.removeAll().then(() => {
+    // Recreate parent menu
+    browser.contextMenus.create({
+      id: "copyTemplate-parent",
+      title: browser.i18n.getMessage("copyTemplateTitle"),
+      contexts: ["all"],
+    });
+
+    // Create menu items for each template
+    templates.forEach((template, index) => {
+      browser.contextMenus.create({
+        id: `copyTemplate-${index}`,
+        parentId: "copyTemplate-parent",
+        title: template.name,
+        contexts: ["all"],
+      });
+    });
+  });
+}
+
+// Listen for template changes
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area === "sync" && changes.templates) {
+    updateContextMenus(changes.templates.newValue || []);
   }
 });
 
+// Initialize context menus
+browser.storage.sync.get("templates").then((result) => {
+  updateContextMenus(result.templates || []);
+});
+
+// Handle menu item clicks
+browser.contextMenus.onClicked.addListener(function (info, tab) {
+  const match = info.menuItemId.match(/^copyTemplate-(\d+)$/);
+  if (match) {
+    const templateIndex = parseInt(match[1]);
+    browser.storage.sync.get("templates").then((result) => {
+      const templates = result.templates || [];
+      if (templateIndex < templates.length) {
+        const template = templates[templateIndex];
+        const url = tab.url;
+        const title = tab.title;
+        const str = template.content
+          .replace("${url}", url)
+          .replace("${title}", title);
+        navigator.clipboard.writeText(str);
+      }
+    });
+  }
+});

@@ -1,6 +1,6 @@
 {
   "copyTemplateTitle": {
-    "message": "copy template"
+    "message": "Copy with Template"
   },
   "discriptionUrl": {
     "message": "tab url"
@@ -9,7 +9,22 @@
     "message": "tab title"
   },
   "save": {
-    "message": "save"
+    "message": "Save"
+  },
+  "update": {
+    "message": "Update"
+  },
+  "delete": {
+    "message": "Delete"
+  },
+  "edit": {
+    "message": "Edit"
+  },
+  "newTemplate": {
+    "message": "New Template"
+  },
+  "defaultTemplateName": {
+    "message": "Default Template"
   },
   "descriptionSpecialString": {
     "message": "The special characters used in the template are as follows"

@@ -11,6 +11,21 @@
   "save": {
     "message": "保存"
   },
+  "update": {
+    "message": "更新"
+  },
+  "delete": {
+    "message": "削除"
+  },
+  "edit": {
+    "message": "編集"
+  },
+  "newTemplate": {
+    "message": "新規テンプレート"
+  },
+  "defaultTemplateName": {
+    "message": "デフォルトテンプレート"
+  },
   "descriptionSpecialString": {
     "message": "テンプレートで利用される特殊文字は、下記の通りです。"
   }
